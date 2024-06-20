@@ -1,0 +1,28 @@
+{
+  "name": "node_udemy",
+  "version": "1.0.0",
+  "description": "Udemy course practice repository",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behuti/udemy_nodejs_course.git"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "mongo"
+  ],
+  "author": "Behuti",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/behuti/udemy_nodejs_course/issues"
+  },
+  "homepage": "https://github.com/behuti/udemy_nodejs_course#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}

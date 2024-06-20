@@ -6,10 +6,12 @@ const requestHandler = (req, res) => {
 
   // Home path
   if (url === "/") {
-    res.write("<html>");
-    res.write("<head><title>My App</title></head>");
-    res.write("<body><h1>Hello from my Node.js Server!</h1></body>");
-    res.write("</html>");
+    const homePageRes = `<html>
+      <head><title>My App</title></head>
+      <body><h1>Hello from my Node.js Server!</h1></body>
+      </html>
+      `;
+    res.write(homePageRes);
     return res.end();
   }
 
@@ -19,6 +21,7 @@ const requestHandler = (req, res) => {
     res.write(
       '<body><form action="/create-user" method="POST"><input type="text" name="username"><button type="submit">Send</button></form></body>'
     );
+
     res.write("</html>");
     return res.end();
   }
@@ -33,11 +36,6 @@ const requestHandler = (req, res) => {
       const message = parsedBody.split("=")[1];
 
       console.log("final message: ", message);
-      // fs.writeFile("message.txt", message, (err) => {
-      //   res.statusCode = 302;
-      //   res.setHeader("Location", "/");
-      //   return res.end();
-      // });
     });
   }
 };
